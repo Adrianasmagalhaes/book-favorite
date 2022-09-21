@@ -1,12 +1,13 @@
 import React from "react";
 import "./Login.css"
+import livro from "../Imagens/livro.jpg"
 
 
 export default function Login() {
   return (
 <main class="form-signin w-100 m-auto">
   <form>
-    <img class="mb-4" src="https://static.vecteezy.com/ti/fotos-gratis/p1/1373603-abra-o-livro-foto.jpg" alt="" width="300" height="100"/>
+    <img class="mb-4" src={livro} alt="" width="300" height="100"/>
     <h1 class="h3 mb-3 fw-normal">Acessar</h1>
 
     <div class="form-floating">
