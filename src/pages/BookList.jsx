@@ -15,11 +15,11 @@ export default function BookList() {
         try {
             const response = await axios({
                 method: "get",
-                url: "https://books.ronier.me",
+                url: "http://localhost:5000/books",
             })
     
-            setBooks(response.data.content);
-            console.log(response.data.content)
+            setBooks(response.data);
+            console.log(response.data)
         } catch (error) {
             console.log(error);
         }
@@ -29,7 +29,7 @@ export default function BookList() {
   
     const columns = [
       {
-        dataField: "id",
+        dataField: "_id",
         text: "Product ID",
       },
       {
@@ -41,12 +41,15 @@ export default function BookList() {
         text: "Product Price",
       },
       {
-        dataField: "authors",
+        dataField: "autor",
         text: "Autor",
       }
     ];
     return(
+      <div>
+      
         <BootstrapTable keyField="id" data={books} columns={columns} />
+        </div>
     )
    
 }
